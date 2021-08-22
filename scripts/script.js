@@ -21,7 +21,10 @@ async function init() {
     root.appendChild(newPokemon);
 
     const spriteUrl = await getOnePokemonSprite(url);
-    // here we will use the sprite url to create an image
+    const imgEl = document.createElement('img');
+     imgEl.src = spriteUrl;
+    newPokemon.appendChild(imgEl)
+
     console.log(
       "Here I will be creating an image with the sprite returned by getOnePokemonSprite"
     );
