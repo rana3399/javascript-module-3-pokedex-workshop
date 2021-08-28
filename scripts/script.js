@@ -15,10 +15,11 @@ function createPokemonLink(name, url) {
 
 async function createPokemon(name, url) {
   const newPokemon = document.createElement("div");
+  console.log(name);
   newPokemon.appendChild(await createPokemonImage(url));
   newPokemon.appendChild(document.createElement("br"));
   newPokemon.appendChild(createPokemonLink(name, url));
-
+console.log(newPokemon)
   return newPokemon;
 }
 
@@ -33,8 +34,8 @@ function searchPokemon(event) {
     createPokemon(term, url).then(
       newPokemon => root.appendChild(newPokemon)
     )
-    //getOnePokemon(term)
-    //  .then(pokemon => console.log(pokemon))
+    getOnePokemon(term)
+     .then(pokemon => console.log(pokemon))
   }
 }
 
