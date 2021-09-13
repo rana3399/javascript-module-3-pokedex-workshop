@@ -21,4 +21,16 @@ async function getOnePokemonSprite(url) {
   return pokemon.sprites['front_default']
 }
 
+function right(){
+  const root = document.getElementById("root");
+
+  const right = document.createElement("div");
+  const pEl = document.createElement("p");
+  pEl.className = "right";
+  pEl.textContent = "Sky"
+
+  right.appendChild(pEl);
+  root.appendChild(right);
+}
+
 export { getAllPokemon, getOnePokemonSprite, getOnePokemon };
